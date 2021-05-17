@@ -23,7 +23,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('profanity_text/', include('profanity_text.urls')),
-    path('profanity_text_api/', include('profanity_text_api.urls'))
+    path('profanity_text_api/', include('profanity_text_api.urls')),
+    path('profane_image/', include('profane_image.urls')),
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
 
 if settings.DEBUG :

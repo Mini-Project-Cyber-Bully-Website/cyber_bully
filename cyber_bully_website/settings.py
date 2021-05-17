@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'profanity_text',
     'profanity_text_api',
+    'profane_image',
 ]
 
 MIDDLEWARE = [
@@ -121,7 +122,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR/ "static",
+    os.path.join(BASE_DIR, 'static/')
 ]
 
 # Media onfigurations

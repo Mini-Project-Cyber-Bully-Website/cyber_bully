@@ -35,13 +35,7 @@ def check_special_character(a_string, cuss_words_list):
                 if check_if_actually_a_cussword(a_word.lower(),cuss_words_list)==True:
                     list_of_words_from_string[list_of_words_from_string.index(a_word)] = convert_cuss_word_to_stars(a_word)
 
-
-
-
     return " ".join(list_of_words_from_string)
-
-
-
 cuss_words_list=tuple(Cusslist.objects.all().values_list('cussword', flat=True))
 
 # Create your views here.
