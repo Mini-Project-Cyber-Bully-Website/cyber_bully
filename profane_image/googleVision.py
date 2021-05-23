@@ -67,10 +67,11 @@ def googleVision(fn):
                 cropped_image=ogimage.crop((a1,a2,b1,b2))
                 blurred_image=cropped_image.filter(ImageFilter.GaussianBlur(radius=30))
                 ogimage.paste(blurred_image,(a1,a2,b1,b2))
-                ogimage.save(result_image_path+'im {}.jpg'.format(i))
-                li.append(result_image_path+'im {}.jpg'.format(i))
-                ogimage = Image.open(result_image_path+'im {}.jpg'.format(i))
+                ogimage.save(result_image_path+'im {}.jpeg'.format(i))
+                ogimage.save()
+                li.append(result_image_path+'im {}.jpeg'.format(i))
+                ogimage = Image.open(result_image_path+'im {}.jpeg'.format(i))
 
     for j in range(len(li)-1):
         os.remove(li[j])
-    return li[-1]
+    return li[-1] if len(li)>0 else result_image_path + str(fn)
