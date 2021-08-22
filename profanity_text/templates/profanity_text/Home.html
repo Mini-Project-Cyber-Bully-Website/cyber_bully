@@ -60,7 +60,9 @@
           </div>
         </nav>
       </div></header>
-    <section class="u-align-left u-clearfix u-image u-shading u-section-1" id="sec-6147" data-image-width="1280" data-image-height="640">
+    
+    <div class="col-lg-12 col-md-6 col-sm-12">
+      <section class="u-align-left u-clearfix u-image u-shading u-section-1" id="sec-6147" data-image-width="1280" data-image-height="640">
       <h1 class="u-custom-font u-font-georgia u-text u-text-1">ANTI-PROFANE</h1>
       <div class="u-align-center u-border-3 u-border-palette-1-dark-1 u-container-style u-expanded-width u-group u-palette-1-light-3 u-group-1">
         <div class="u-container-layout u-valign-middle-xl u-container-layout-1">
@@ -83,7 +85,7 @@
       </a>
       <a href="{% url 'profane_image:index' %}#imageModeration" data-page-id="92199917" class="u-border-6 u-border-custom-color-2 u-btn u-btn-round u-button-style u-palette-1-light-2 u-radius-6 u-text-black u-btn-4">IMAGE MODERATION</a>
     </section>
-    <section class="u-clearfix u-image u-shading u-section-2" id="sec-5cb6" data-image-width="1280" data-image-height="640">
+      <section class="u-clearfix u-image u-shading u-section-2" id="sec-5cb6" data-image-width="1280" data-image-height="640">
       <div class="u-clearfix u-sheet u-valign-bottom-sm u-valign-middle-xl u-sheet-1">
         <div class="u-clearfix u-expanded-width-lg u-expanded-width-md u-expanded-width-sm u-expanded-width-xl u-gutter-18 u-layout-wrap u-layout-wrap-1">
           <div class="u-layout">
@@ -94,8 +96,8 @@
                   </p>
                   <form action="/profanity_text/#scrollresult" method="post">
                     {% csrf_token %}
-                      <div class="form-floating">
-                        <textarea name="content" id="content" class="p-1 m-4"  placeholder="Leave a comment here" id="floatingTextarea" rows="20" cols="60">{{ original }}</textarea>
+                      <div class="form-floating p-1">
+                        <textarea name="content" id="content" class="p-1 w-100"  placeholder="Leave a comment here" id="floatingTextarea" rows="20" cols="30">{{ original }}</textarea>
                         <label for="floatingTextarea"></label>
                       </div>                      
                     <button type="submit" value="Check Profanity" class="btn btn-lg btn-dark mx-4">Check Profanity</button>
@@ -122,6 +124,8 @@
         </div>
       </div>
     </section>
+    </div>
+    
     <section class="u-clearfix u-image u-shading u-section-3" id="sec-31f2" data-image-width="1280" data-image-height="640">
       <div class="u-clearfix u-sheet u-valign-middle-md u-valign-middle-sm u-sheet-1">
         <div class="u-border-10 u-border-palette-1-base u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-shape-rectangle u-white u-group-1">
